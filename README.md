@@ -33,7 +33,7 @@ The project follows the standard Maven layout:
 ```
 democompiler/
 ├── pom.xml                                              # Maven build configuration
-├── Readme.md                                            # Project documentation
+├── README.md                                            # Project documentation
 ├── errors.md                                            # Build and error log
 ├── src/
 │   ├── main/java/com/example/compiler/democompiler/
@@ -84,7 +84,7 @@ To run the scanner and print the tokens to the console, run:
 ```bash
 .\mvnw.cmd compile exec:java
 ```
-Or open [`DemocompilerApplication.java`](file:///c:/Users/Dell/Desktop/Compiler/democompiler/src/main/java/com/example/compiler/democompiler/DemocompilerApplication.java) in VS Code and click **Run**.
+Or open `DemocompilerApplication.java` in VS Code and click **Run**.
 
 ## Sample Output
 
@@ -139,56 +139,3 @@ Tokens:
 
 ## Next Phase (Phase 2)
 In the next phase of the compiler, these tokens will be fed into a Parser (Syntax Analyzer) to construct a parse tree / Abstract Syntax Tree (AST) according to the grammar rules of the language.
-
-When the scanner runs on a sample snippet like:
-```java
-int x = 10;
-float y = 2.5;
-if (x >= 5) {
-    print("x is greater");
-} else {
-    x = x + 1;
-}
-```
-
-The output printed to the terminal is:
-```text
-Tokens:
-[KEYWORD : "int" | line 2]
-[IDENTIFIER : "x" | line 2]
-[OPERATOR : "=" | line 2]
-[NUMBER : "10" | line 2]
-[DELIMITER : ";" | line 2]
-[KEYWORD : "float" | line 3]
-[IDENTIFIER : "y" | line 3]
-[OPERATOR : "=" | line 3]
-[NUMBER : "2.5" | line 3]
-[DELIMITER : ";" | line 3]
-[KEYWORD : "if" | line 4]
-[DELIMITER : "(" | line 4]
-[IDENTIFIER : "x" | line 4]
-[OPERATOR : ">=" | line 4]
-[NUMBER : "5" | line 4]
-[DELIMITER : ")" | line 4]
-[DELIMITER : "{" | line 4]
-[KEYWORD : "print" | line 5]
-[DELIMITER : "(" | line 5]
-[STRING : "x is greater" | line 5]
-[DELIMITER : ")" | line 5]
-[DELIMITER : ";" | line 5]
-[DELIMITER : "}" | line 6]
-[KEYWORD : "else" | line 6]
-[DELIMITER : "{" | line 6]
-[IDENTIFIER : "x" | line 7]
-[OPERATOR : "=" | line 7]
-[IDENTIFIER : "x" | line 7]
-[OPERATOR : "+" | line 7]
-[NUMBER : "1" | line 7]
-[DELIMITER : ";" | line 7]
-[DELIMITER : "}" | line 8]
-[EOF : "EOF" | line 8]
-```
-
-## Next Phase (Phase 2)
-In the next phase of the compiler, these tokens will be fed into a Parser (Syntax Analyzer) to construct a parse tree / Abstract Syntax Tree (AST) according to the grammar rules of the language.
-
